@@ -44,7 +44,7 @@ class Game {
     form.titleImg.position(40, 50);
     form.titleImg.class("gameTitleAfterEffect");
 
-    //C39
+    
     this.resetTitle.html("Reset Game");
     this.resetTitle.class("resetText");
     this.resetTitle.position(width / 2 + 200, 40);
@@ -74,7 +74,6 @@ class Game {
 
       this.showLeaderboard();
 
-      //index of the array
       var index = 0;
       for (var plr in allPlayers) {
         //add 1 to the index for every loop
@@ -92,12 +91,10 @@ class Game {
           fill("red");
           ellipse(x, y, 60, 60);
 
-          // Changing camera position in y direction
           camera.position.y = cars[index - 1].position.y;
         }
       }
 
-      // handling keyboard events
       this.handlePlayerControls();
 
       drawSprites();
@@ -122,7 +119,6 @@ class Game {
       (players[0].rank === 0 && players[1].rank === 0) ||
       players[0].rank === 1
     ) {
-      // &emsp;    This tag is used for displaying four spaces.
       leader1 =
         players[0].rank +
         "&emsp;" +
